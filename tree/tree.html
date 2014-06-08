@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/tree.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/tree.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript">
+    /**var ids = [];
+        var root = [];
+        var data = [{
+            id:-1,
+            text:"ttt",
+            nodes:root
+        }];
+        for(var i=0; i<500; i++){
+            var nodes = [];
+            var obj = {
+                id : i,
+                text : "node" + i,
+                nodes : nodes
+            };
+            root.push(obj);
+            root = nodes;
+        }
+    var data = [
+        {id:1, text:1, child:[
+             {id:2, text:2, isLeaf: true},{id:3, text:3, isLeaf: true},{id:4, text:4, isLeaf: true}
+       ]},
+       {id:5, text:5, child:[
+                              {id:6, text:6, child:[{id:7, text:7, isLeaf:true},{id:8, text:8, isLeaf:true},{id:9, text:9, isLeaf:true}]}
+                        ]}
+                
+    ]**/
+    onload = function(){
+        sttree = new Tree({
+            container : document.getElementById('test'),
+            //async: true,
+            datasource: 'test1',
+            mapKeys: {
+                id: 'prod_id',
+                text: 'name',
+                child: 'nodes'
+            }
+        });
+        
+        sttree.load(data);
+        //sttree.modifyModel(function(m){alert(m.prod_id)});
+        //sttree.modifyNode(function(liNode, data){liNode.style.background = "blue"});
+        $('#getV').click(function(){
+            alert(sttree.getVal())
+        })
+        $('#setV').click(function(){
+            sttree.setVal($('#getV').val().split(','))
+        })
+    };
+    </script>
+</head>
+<body>
+    
+    <div id="test" style="position:absolute;top:30px;left:10px;width:300px;"></div><div id="test1" style="position:absolute;top:30px;left:400px;width:300px;"></div>
+    </body>
+</html>

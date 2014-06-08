@@ -1,0 +1,120 @@
+ul.tree{
+	font-size: 12px;
+	padding:0;
+	margin:0;
+}
+.tree li{
+	display:block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: left;
+	white-space: nowrap;
+}
+.tree li.hide{
+	display:none;
+}
+.tree ul{
+	display:block;
+	padding: 0 0 0 18px;
+	margin:0;
+}
+.tree ul.hide{
+	display:none;
+}
+.tree ul.line{
+	background:url('../img/line.gif') 0 0 repeat-y;
+}
+.tree button{
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    vertical-align: middle;
+}
+.tree a{
+	padding: 0;
+	margin: 0 10px 0 16px;
+	cursor: pointer;
+	color: #333;
+	text-decoration: none;
+}
+.tree button.hide{
+	display:none;
+}
+.tree button.switch{
+	margin-left: -34px;
+	height: 18px;
+	width: 18px;
+}
+.tree button.no-offset{
+	height: 18px;
+	width: 18px;
+}
+.tree a.no-offset{
+	margin: 0 10px 0 0;
+}
+.tree button.checkbox{
+	width: 13px;
+	height: 13px;
+	margin: 0 3px 0 18px;
+	border-image: initial;
+}
+.tree button.unchecked{
+	background:url('../img/unchecked.jpg');
+}
+.tree button.checked{
+	background:url('../img/checked.jpg');
+}
+.tree button.halfchecked{
+	background:url('../img/halfchecked.jpg');
+}
+.tree button.root-close{
+	background:url('../img/root_close.gif')
+}
+.tree button.root-open{
+	background:url('../img/root_open.gif')
+}
+.tree button.top-close{
+	background:url('../img/close_top.gif')
+}
+.tree button.center-close{
+	background:url('../img/close_center.gif')
+}
+.tree button.bottom-close{
+	background:url('../img/close_bottom.gif')
+}
+.tree button.top-open{
+	background:url('../img/open_top.gif')
+}
+.tree button.center-open{
+	background:url('../img/open_center.gif')
+}
+.tree button.bottom-open{
+	background:url('../img/open_bottom.gif')
+}
+.tree button.root-line{
+	background:url('../img/line_root.gif')
+}
+.tree button.top-line{
+	background:url('../img/line_top.gif')
+}
+.tree button.center-line{
+	background:url('../img/line_center.gif')
+}
+.tree button.bottom-line{
+	background:url('../img/line_bottom.gif')
+}
+.tree button.loading{
+	background:url('../img/loading.gif')
+}
+.tree button.open{
+	background:url('../img/open.gif')
+}
+.tree button.close{
+	background:url('../img/close.gif')
+}
