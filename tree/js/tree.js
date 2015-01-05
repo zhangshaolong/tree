@@ -4,24 +4,9 @@
  * 支持对数据集的适配
  * 支持异步加载或者全集加载
  * 支持自动对截断的文本进行title提示
- * @author：张少龙（zhangshaolong@baidu.com）
+ * @author：张少龙（zhangshaolongjj@163.com）
  */
-var siblings = indexRelation[pid][childKey];
-        console.log(siblings, pid, indexCheckbox[pid])
-        var isHalf = false;
-        for (var i=0,len=siblings.length; i<len; i++) {
-            if (!indexCheckbox[siblings[i]].hasClass(state)) {
-                isHalf = true;
-                break;
-            }
-        }
-        var pCheckbox = indexCheckbox[pid];
-        if (isHalf) {
-            pCheckbox.removeClass().addClass('checkbox halfchecked');
-            state = 'halfchecked';
-        } else {
-            pCheckbox.removeClass().addClass('checkbox ' + state);
-        }var Tree = (function() {
+var Tree = (function() {
     var DEFAULT_MAP_KEYS = {
         pid: 'pid',
         id : 'id',
@@ -333,22 +318,21 @@ var siblings = indexRelation[pid][childKey];
         
         var pid = indexRelation[id][pidKey];
         if (pid !== null && pid !== undefined) {
-			var siblings = indexRelation[pid][childKey];
-			console.log(siblings, pid, indexCheckbox[pid])
-			var isHalf = false;
-			for (var i=0,len=siblings.length; i<len; i++) {
-				if (!indexCheckbox[siblings[i]].hasClass(state)) {
-					isHalf = true;
-					break;
-				}
-			}
-			var pCheckbox = indexCheckbox[pid];
-			if (isHalf) {
-				pCheckbox.removeClass().addClass('checkbox halfchecked');
-				state = 'halfchecked';
-			} else {
-				pCheckbox.removeClass().addClass('checkbox ' + state);
-			}
+            var siblings = indexRelation[pid][childKey];
+            var isHalf = false;
+            for (var i=0,len=siblings.length; i<len; i++) {
+                if (!indexCheckbox[siblings[i]].hasClass(state)) {
+                    isHalf = true;
+                    break;
+                }
+            }
+            var pCheckbox = indexCheckbox[pid];
+            if (isHalf) {
+                pCheckbox.removeClass().addClass('checkbox halfchecked');
+                state = 'halfchecked';
+            } else {
+                pCheckbox.removeClass().addClass('checkbox ' + state);
+            }
             toggleParents(pid, state, treeInstance);
         }
     };
